@@ -1,13 +1,13 @@
 {
-  "name": "backend",
+  "name": "foodbyte-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "FoodByte - Food Delivery App Backend API",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "server": "nodemon server.js"
   },
-  "author": "",
+  "author": "harishroy9",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

@@ -1,130 +1,122 @@
-# TOMATO - Food Ordering Website
+# 🍔 FoodByte - Food Delivery Web App
 
-This repository hosts the source code for TOMATO, a dynamic food ordering website built with the MERN Stack. It offers a user-friendly platform for seamless online food ordering.
+FoodByte is a full-stack food delivery platform built with the **MERN Stack**. It provides a seamless online food ordering experience with a user-facing storefront, an admin management panel, and a robust REST API backend.
 
-## Demo
+> **Author:** [harishroy9](https://github.com/harishroy9)
+> **Repository:** [github.com/harishroy9/food-delivery](https://github.com/harishroy9/food-delivery)
 
-- User Panel: [https://food-delivery-frontend-s2l9.onrender.com/](https://food-delivery-frontend-s2l9.onrender.com/)
-- Admin Panel: [https://food-delivery-admin-wrme.onrender.com/](https://food-delivery-admin-wrme.onrender.com/)
+---
 
-## Features
+## ✨ Features
 
-- User Panel
-- Admin Panel
-- JWT Authentication
-- Password Hashing with Bcrypt
+### User Panel
+- Browse food items by category
+- Add to cart & place orders
+- JWT-based Login / Signup & Logout
 - Stripe Payment Integration
-- Login/Signup
-- Logout
-- Add to Cart
-- Place Order
-- Order Management
-- Products Management
-- Filter Food Products
-- Login/Signup
-- Authenticated APIs
-- REST APIs
-- Role-Based Identification
-- Beautiful Alerts
+- Track My Orders
+- Beautiful toast alerts
 
-## Screenshots
+### Admin Panel
+- Secure admin login
+- Add, list & delete food products
+- Manage and update orders
+- Role-based access
 
-![Hero](https://i.ibb.co/59cwY75/food-hero.png)
-- Hero Section
+### Backend
+- RESTful APIs with Express.js
+- MongoDB database with Mongoose
+- Password hashing with Bcrypt
+- Authenticated routes with JWT
+- File uploads with Multer
 
-![Products](https://i.ibb.co/JnNQPyQ/food-products.png)
-- Products Section
+---
 
-![Cart](https://i.ibb.co/t2LrQ8p/food-cart.png)
-- Cart Page
+## 🛠️ Tech Stack
 
-![Login](https://i.ibb.co/s6PgwkZ/food-login.png)
-- Login Popup
+| Layer     | Technology                          |
+|-----------|-------------------------------------|
+| Frontend  | React.js, React Router, Axios       |
+| Admin     | React.js, React Router, Axios       |
+| Backend   | Node.js, Express.js                 |
+| Database  | MongoDB (Mongoose)                  |
+| Auth      | JWT, Bcrypt                         |
+| Payments  | Stripe                              |
+| Uploads   | Multer                              |
 
-## Run Locally
+---
 
-Clone the project
+## 🚀 Run Locally
 
-```bash
-    git clone https://github.com/Mshandev/Food-Delivery
-```
-Go to the project directory
-
-```bash
-    cd Food-Delivery
-```
-Install dependencies (frontend)
+### Clone the Repository
 
 ```bash
-    cd frontend
-    npm install
+git clone https://github.com/harishroy9/food-delivery.git
+cd food-delivery
 ```
-Install dependencies (admin)
+
+### Install Dependencies
 
 ```bash
-    cd admin
-    npm install
+# Frontend
+cd frontend && npm install
+
+# Admin
+cd ../admin && npm install
+
+# Backend
+cd ../backend && npm install
 ```
-Install dependencies (backend)
+
+### Setup Environment Variables
+
+Create a `.env` file inside the `backend/` folder:
+
+```env
+JWT_SECRET=your_jwt_secret_key
+SALT=10
+MONGO_URL=your_mongodb_connection_url
+STRIPE_SECRET_KEY=your_stripe_secret_key
+```
+
+### Configure URLs
+
+- **Admin** → `admin/src/App.jsx`: set `const url = "YOUR_BACKEND_URL"`
+- **Frontend** → `frontend/src/context/StoreContext.jsx`: set `const url = "YOUR_BACKEND_URL"`
+- **Backend** → `backend/controllers/orderController.js`: set `const frontend_url = "YOUR_FRONTEND_URL"`
+
+### Start the Servers
 
 ```bash
-    cd backend
-    npm install
-```
-Setup Environment Vaiables
+# Backend (from /backend)
+nodemon server.js
 
-```Make .env file in "backend" folder and store environment Variables
-  JWT_SECRET=YOUR_SECRET_TEXT
-  SALT=YOUR_SALT_VALUE
-  MONGO_URL=YOUR_DATABASE_URL
-  STRIPE_SECRET_KEY=YOUR_KEY
- ```
+# Frontend (from /frontend)
+npm run dev
 
-Setup the Frontend and Backend URL
-   - App.jsx in Admin folder
-      const url = YOUR_BACKEND_URL
-     
-  - StoreContext.js in Frontend folder
-      const url = YOUR_BACKEND_URL
-
-  - orderController in Backend folder
-      const frontend_url = YOUR_FRONTEND_URL 
-
-Start the Backend server
-
-```bash
-    nodemon server.js
+# Admin (from /admin)
+npm run dev
 ```
 
-Start the Frontend server
+---
 
-```bash
-    npm start
+## 📁 Project Structure
+
+```
+food-delivery/
+├── frontend/       # React user-facing app
+├── admin/          # React admin panel
+├── backend/        # Node.js + Express REST API
+└── README.md
 ```
 
-Start the Backend server
+---
 
-```bash
-    npm start
-```
-## Tech Stack
-* [React](https://reactjs.org/)
-* [Node.js](https://nodejs.org/en)
-* [Express.js](https://expressjs.com/)
-* [Mongodb](https://www.mongodb.com/)
-* [Stripe](https://stripe.com/)
-* [JWT-Authentication](https://jwt.io/introduction)
-* [Multer](https://www.npmjs.com/package/multer)
+## 📬 Contact
 
-## Deployment
+- **GitHub:** [harishroy9](https://github.com/harishroy9)
+- **Email:** contact@foodbyte.com
 
-The application is deployed on Render.
+---
 
-## Contributing
-
-Contributions are always welcome!
-Just raise an issue, and we will discuss it.
-
-## Feedback
-
-If you have any feedback, please reach out to me [here](https://www.linkedin.com/in/muhammad-shan-full-stack-developer/)
+*© 2025 FoodByte — All Rights Reserved*
